@@ -1,0 +1,19 @@
+<nav class="nav-extended indigo darken-4">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a (click)="GoToHome()" class="brand-logo">MP2</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a (click)="logout()">Logout</a></li>
+      </ul>
+    </div>
+    <div class="nav-content">
+      <div class="nav-div">
+        <img class="circle responsive-img" src="http://placehold.it/100x100">
+      </div>
+      <h1 class="profile-name">{{user.username}}</h1>
+      <!-- <p class="user-text">Esto Es Un Texto</p> -->
+    </div>
+  </div>
+</nav>
