@@ -34,13 +34,17 @@
       <div>Following<a href="#!" class="secondary-content"><i class="material-icons">people</i></a></div>
     </a>
   </li>
-  <li class="collection-item">
-    <div>Followers<a href="#!" class="secondary-content"><i class="material-icons">people_outline</i></a></div>
+  <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+    <a [routerLink]="['/followers']">
+      <div>Followers<a href="#!" class="secondary-content"><i class="material-icons">people_outline</i></a></div>
+    </a>
   </li>
   <li class="collection-item">
     <div>Photos<a href="#!" class="secondary-content"><i class="material-icons">photo_library</i></a></div>
   </li>
-  <li class="collection-item">
-    <div>Notifications<a href="#!" class="secondary-content"><i class="material-icons">notifications</i></a></div>
+  <li class="collection-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+    <a [routerLink]="['/notifications']">
+      <div>Notificaciones<a href="#!" class="secondary-content"><i class="material-icons">notifications</i></a></div>
+    </a>
   </li>
 </ul>

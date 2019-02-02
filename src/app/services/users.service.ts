@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { Observable, observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -19,7 +19,7 @@ export class UsersService {
   }
 
   GetUserByName(username): Observable<any> {
-    return this.http.get(`${BASEURL}/user/${username}`);
+    return this.http.get(`${BASEURL}/username/${username}`);
   }
 
   FollowUser(userFollowed): Observable<any> {
@@ -31,6 +31,19 @@ export class UsersService {
   UnFollowUser(userFollowed): Observable<any> {
     return this.http.post(`${BASEURL}/unfollow-user`, {
       userFollowed
+    });
+  }
+
+  MarkNotification(id, deleteValue?): Observable<any> {
+    return this.http.post(`${BASEURL}/mark/${id}`, {
+      id,
+      deleteValue
+    });
+  }
+
+  MarkAllAsRead(): Observable<any> {
+    return this.http.post(`${BASEURL}/mark-all`, {
+      all: true
     });
   }
 }

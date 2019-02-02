@@ -3,9 +3,28 @@
     <div class="nav-wrapper">
       <a (click)="GoToHome()" class="brand-logo">MP2</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a (click)="logout()">Logout</a></li>
+        <li class="dropdown-button dropdown-trigger" data-target="dropdown">
+          <i class="fa fa-globe fa-1x badge"></i>
+          <span class="nav-label-icon" *ngIf="count.length > 0">{{count.length}}</span>
+          <ul id='dropdown' class='dropdown-content col s12 collection'>
+            <li class="collection-item avatar" *ngFor="let data of notifications">
+              <img src="http://placehold.it/50x50" class="circle">
+              <span [ngClass]="data.read ? 'isRead' : 'unread'">{{data.message}}</span>
+              <p class="time">{{TimeFromNow(data.created)}}</p>
+            </li>
+            <li>
+              <p *ngIf="notifications.length <= 0">
+                No Hay Notificaciones
+              </p>
+            </li>
+            <p class="secondary-content">
+              <a class="markAll btn" (click)="MarkAll()">Marcar Todo Como Leido</a>
+            </p>
+          </ul>
+        </li>
+        <li>
+          <a (click)="logout()">Logout</a>
+        </li>
       </ul>
     </div>
     <div class="nav-content">
