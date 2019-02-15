@@ -1,12 +1,12 @@
 <app-toolbar></app-toolbar>
 <div class="container" style="margin-top: 30px">
   <div class="row">
-    <div class="col s12 m4 13">
+    <div class="col s12 m4 l3">
       <app-side></app-side>
     </div>
-    <div class="col s12 m8 19">
+    <div class="col s12 m8 l9">
       <div class="row" *ngIf="following.length > 0">
-        <div class="col s12 m6 14 cardDiv" *ngFor="let user of following">
+        <div class="col s12 m6 l4 cardDiv" *ngFor="let user of following">
           <div class="card">
             <a>
               <div class="card-image imgDiv">
