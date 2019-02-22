@@ -1,6 +1,7 @@
-<ul class="collection s12 m12 l10" *ngFor="let post of topPosts">
+<ul class="collection col s12 m12 l10" *ngFor="let post of topPosts">
   <li class="collection-item avatar">
-    <img src="http://placehold.it/50x50" alt="" class="circle" /> <span class="title">{{ post.username }}</span>
+    <img src="http://placehold.it/50x50" alt="" class="circle" />
+    <span class="title">{{post.username}}</span>
     <p class="time">
       {{TimeFromNow(post.createdAt)}} <br />
       <!-- Country -->
@@ -15,10 +16,9 @@
         </div>
         <div class="card-action">
           <i (click)="LikePost(post)" [ngClass]="(!CheckInLikesArray(post.likes, user.username)) ? 'notLiked' : 'liked'"
-            class="material-icons">thumb_up</i> <span class="iconSpan">{{ post.totalLikes }}</span>
+            class="material-icons">thumb_up</i> <span class="iconSpan">{{post.totalLikes}}</span>
           <i class="material-icons" [ngClass]="(!CheckInLikesArray(post.comments, user.username)) ? 'notLiked' : 'liked'"
-            (click)="OpenCommentBox(post)">chat</i> <span class="iconSpan">{{
-            post.comments.length }}</span>
+            (click)="OpenCommentBox(post)">chat</i> <span class="iconSpan">{{post.comments.length}}</span>
         </div>
       </div>
     </div>

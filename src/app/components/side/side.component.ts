@@ -1,4 +1,4 @@
-import { io } from 'socket.io-client';
+import io from 'socket.io-client';
 import { UsersService } from './../../services/users.service';
 import { TokenService } from '../../services/token.service';
 import { Component, OnInit } from '@angular/core';

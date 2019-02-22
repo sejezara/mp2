@@ -11,7 +11,7 @@ import * as moment from 'moment';
   styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit, AfterViewInit {
-  toolbalElement: any;
+  toolbarElement: any;
   socket: any;
 
   commentForm: FormGroup;
@@ -24,7 +24,7 @@ export class CommentsComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {
-    this.toolbalElement = document.querySelector('.nav-content');
+    this.toolbarElement = document.querySelector('.nav-content');
     this.postId = this.route.snapshot.paramMap.get('id');
 
     this.init();
@@ -42,7 +42,7 @@ export class CommentsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.toolbalElement.style.display = 'none';
+    this.toolbarElement.style.display = 'none';
   }
 
   AddComment() {
