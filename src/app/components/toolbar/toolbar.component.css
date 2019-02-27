@@ -4,7 +4,7 @@
 }
 
 .navDiv {
-  background-color: #64b5f6;
+  background-color: #1a237e;
 }
 
 .nav-content {
@@ -48,7 +48,7 @@
 }
 
 .nav-label-icon {
-  top: -9px;
+  top: -10px;
   position: relative;
   background: red;
   padding: 5px;
@@ -72,7 +72,7 @@
 }
 
 .title {
-  color: #64b5f6;
+  color: #1a237e;
   margin: 0px !important;
   padding: 0px !important;
   font-weight: normal;
@@ -102,7 +102,7 @@
 }
 
 .material-icons {
-  color: #64b5f6 !important;
+  color: #1a237e !important;
   cursor: pointer;
 }
 

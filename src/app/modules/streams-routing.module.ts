@@ -7,6 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PeopleComponent } from './../components/people/people.component';
 import { NotificationsComponent } from '../components/notifications/notifications.component';
+import { ChatComponent } from '../components/chat/chat.component';
 
 const routes: Routes = [
   {
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'people', component: PeopleComponent, canActivate: [AuthGuard] },
   { path: 'following', component: FollowingComponent, canActivate: [AuthGuard] },
   { path: 'followers', component: FollowersComponent, canActivate: [AuthGuard] },
-  { path: 'notifications', component: NotificationsComponent, canActivate: [AuthGuard] }
+  { path: 'notifications', component: NotificationsComponent, canActivate: [AuthGuard] },
+  { path: 'chat/:name', component: ChatComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({
