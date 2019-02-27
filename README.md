@@ -2,7 +2,11 @@
 
 SERGIO JESUS ZAVALA RAMOS
 
-# Mp2
+PROYECTO MODULAR - SERGIO JESUS ZAVALA RAMOS
+
+MP2 - Aplicacion De Mensajeria Tipo Chat En Tiempo Real.
+
+En Desarrollo...
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
