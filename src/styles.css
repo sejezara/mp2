@@ -1,9 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+.brand-logo {
+  font-family: 'Lobster', cursive;
+}
+
 .tabs .indicator {
   background-color: #1a237e !important;
 }
 
 .btn {
+  background-color: #1a237e
+}
+
+.btn:hover {
   background-color: #1a237e
 }
 

@@ -7,15 +7,17 @@
     <div class="col s12 m8 l9">
       <ul class="collection col s12 m10" *ngIf="notifications.length > 0">
         <li class="collection-item avatar" *ngFor="let data of notifications">
-          <img class="circle" src="http://placehold.it/50x50">
-          <span class="title">{{data.message}}</span>
+          <img class="circle"
+            src="http://res.cloudinary.com/sejezara/image/upload/v{{data.senderId.picVersion}}/{{data.senderId.picId}}">
+          <span class=" title">{{data.message}}</span>
           <a class="secondary-content">
             <i *ngIf="!data.read" class="material-icons">brightness_1</i>
             <i *ngIf="data.read" class="material-icons">panorama_fish_eye</i>
           </a>
           <p class="time">{{TimeFromNow(data.created)}}</p>
           <div>
-            <i class="material-icons" (click)="MarkNotification(data)" [ngClass]="data.read ? 'disabled': 'notDisabled'">check</i>
+            <i class="material-icons" (click)="MarkNotification(data)"
+              [ngClass]="data.read ? 'disabled': 'notDisabled'">check</i>
             <i class="material-icons" (click)="DeleteNotification(data)">delete_forever</i>
           </div>
         </li>

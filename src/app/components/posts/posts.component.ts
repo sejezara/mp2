@@ -32,7 +32,7 @@ export class PostsComponent implements OnInit {
   AllPosts() {
     this.postService.getAllPosts().subscribe(
       data => {
-        this.posts = data.posts; //Ordenar los posts (Ascendente o Descendente)
+        this.posts = data.posts; //Ordenar los posts (Ascendente o Descendente).reverse()
       },
       err => {
         if (err.error.token === null) {

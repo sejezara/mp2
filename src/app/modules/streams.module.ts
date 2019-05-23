@@ -22,6 +22,9 @@ import { ChatComponent } from '../components/chat/chat.component';
 import { MessageComponent } from '../components/message/message.component';
 import { NgxAutoScrollModule } from 'ngx-auto-scroll';
 import { EmojiPickerModule } from 'ng2-emoji-picker';
+import { ImagesComponent } from '../components/images/images.component';
+import { FileUploadModule } from 'ng2-file-upload';
+import { ViewUserComponent } from '../components/view-user/view-user.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { EmojiPickerModule } from 'ng2-emoji-picker';
     NotificationsComponent,
     TopStreamsComponent,
     ChatComponent,
-    MessageComponent
+    MessageComponent,
+    ImagesComponent,
+    ViewUserComponent
   ],
   imports: [
     CommonModule,
@@ -46,6 +51,7 @@ import { EmojiPickerModule } from 'ng2-emoji-picker';
     HttpClientModule,
     RouterModule,
     NgxAutoScrollModule,
+    FileUploadModule,
     EmojiPickerModule.forRoot()
   ],
   exports: [StreamsComponent, ToolbarComponent],
