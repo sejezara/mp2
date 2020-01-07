@@ -19,6 +19,7 @@ export class ViewUserComponent implements OnInit, AfterViewInit {
   followers = [];
   user: any;
   name: any;
+  nombre: any;
 
   constructor(private route: ActivatedRoute, private usersService: UsersService) {}
 

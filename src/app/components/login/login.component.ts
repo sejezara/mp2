@@ -40,13 +40,14 @@ export class LoginComponent implements OnInit {
         this.loginForm.reset();
         setTimeout(() => {
           this.router.navigate(['streams']);
-        }, 1500);
+        }, 500);
       },
       err => {
         this.showSpinner = false;
 
         if (err.error.message) {
           this.errorMessage = err.error.message;
+          this.loginForm.reset();
         }
       }
     );

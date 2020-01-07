@@ -20,10 +20,10 @@
             </a>
             <div class="card-action">
               <h3 class="card-title">
-                {{ user.userFollowed.username }}
+                {{ user.userFollowed.nombre }}
               </h3>
-              <p *ngIf="user.userFollowed.city">
-                {{ user.userFollowed.city }}, {{ user.userFollowed.state }}, {{ user.userFollowed.country }}
+              <p *ngIf="user.userFollowed.carrera">
+                {{ user.userFollowed.carrera }}
               </p>
               <button class="btn indigo darken-4 postBtn" (click)="UnfollowUser(user.userFollowed)">Unfollow</button>
             </div>

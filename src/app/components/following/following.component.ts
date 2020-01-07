@@ -15,7 +15,7 @@ export class FollowingComponent implements OnInit {
   socket: any;
 
   constructor(private tokenService: TokenService, private usersService: UsersService) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {

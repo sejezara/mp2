@@ -23,7 +23,7 @@ export class PostFormComponent implements OnInit {
   selectedFile: any;
 
   constructor(private fb: FormBuilder, private postService: PostService) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {

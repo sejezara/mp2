@@ -24,7 +24,7 @@ export class ImagesComponent implements OnInit {
   socket: any;
 
   constructor(private usersService: UsersService, private tokenService: TokenService) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {

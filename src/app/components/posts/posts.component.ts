@@ -17,7 +17,7 @@ export class PostsComponent implements OnInit {
   user: any;
 
   constructor(private postService: PostService, private tokenService: TokenService, private router: Router) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {

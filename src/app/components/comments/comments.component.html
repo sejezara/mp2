@@ -10,7 +10,7 @@
           <div class="card">
             <ul class="collection">
               <li class="collection-item">
-                <span class="post">{{post}}</span>
+                <span class="post">{{ post }}</span>
               </li>
             </ul>
           </div>
@@ -21,7 +21,7 @@
               <form [formGroup]="commentForm" (ngSubmit)="AddComment()">
                 <div class="formDiv">
                   <textarea formControlName="comment" class="materialize-textarea"></textarea>
-                  <button class="btn waves-effect waves-light indigo darken-4 postBtn" [disabled]="!commentForm.valid">
+                  <button class="btn indigo darken-4 postBtn" [disabled]="!commentForm.valid">
                     Agregar Comentario
                   </button>
                 </div>
@@ -33,13 +33,12 @@
 
       <ul class="collection col s12 m10" *ngFor="let comment of commentsArray">
         <li class="collection-item avatar">
-          <img class="circle" src="http://placehold.it/50x50">
-          <span class="title">{{comment.username}}</span>
-          <p class="time">{{TimeFromNow(comment.createdAt)}}</p>
-          <p class="postComment">{{comment.comment}}</p>
+          <img class="circle" src="http://placehold.it/50x50" />
+          <span class="title">{{ comment.nombre }}</span>
+          <p class="time">{{ TimeFromNow(comment.createdAt) }}</p>
+          <p class="postComment">{{ comment.comment }}</p>
         </li>
       </ul>
-
     </div>
   </div>
 </div>

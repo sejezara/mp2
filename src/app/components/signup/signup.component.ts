@@ -41,7 +41,7 @@ export class SignupComponent implements OnInit {
         this.signupForm.reset();
         setTimeout(() => {
           this.router.navigate(['streams']);
-        }, 1500);
+        }, 500);
       },
       err => {
         this.showSpinner = false;

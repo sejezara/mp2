@@ -18,10 +18,10 @@
             </a>
             <div class="card-action">
               <h3 class="card-title">
-                {{ user.username }}
+                {{ user.nombre }}
                 <i class="fa fa-circle" *ngIf="CheckIfOnline(user.username)"></i>
               </h3>
-              <p *ngIf="user.city">{{ user.city }}, {{ user.state }}, {{ user.country }}</p>
+              <p *ngIf="user.carrera">{{ user.carrera }}</p>
               <button
                 class="btn indigo darken-4 postBtn"
                 *ngIf="!CheckInArray(userArr, user._id)"

@@ -9,8 +9,11 @@
           <ul id="dropdown" class="dropdown-content col s12 collection">
             <li class="collection-item avatar" *ngFor="let data of notifications">
               <img
-                src="http://res.cloudinary.com/sejezara/image/upload/v{{data.senderId.picVersion}}/{{data.senderId.picId}}"
-                class="circle" />
+                src="http://res.cloudinary.com/sejezara/image/upload/v{{ data.senderId.picVersion }}/{{
+                  data.senderId.picId
+                }}"
+                class="circle"
+              />
               <span [ngClass]="data.read ? 'isRead' : 'unread'">{{ data.message }}</span>
               <p class="time">{{ TimeFromNow(data.created) }}</p>
             </li>
@@ -33,22 +36,32 @@
           <i class="fa fa-bell fa-1x badge"></i>
           <span class="nav-label-icon" *ngIf="msgNumber > 0">{{ msgNumber }}</span>
           <ul id="dropdown1" class="dropdown-content col s12 collection">
-            <li class="collection-item avatar" *ngFor="let chat of chatList"
-              (click)="GoToChatPage(chat.receiverId.username)">
+            <li
+              class="collection-item avatar"
+              *ngFor="let chat of chatList"
+              (click)="GoToChatPage(chat.receiverId.username)"
+            >
               <img
-                src="http://res.cloudinary.com/sejezara/image/upload/v{{chat.receiverId.picVersion}}/{{chat.receiverId.picId}}"
-                class="circle" />
+                src="http://res.cloudinary.com/sejezara/image/upload/v{{ chat.receiverId.picVersion }}/{{
+                  chat.receiverId.picId
+                }}"
+                class="circle"
+              />
               <span class="title">
-                {{ chat.receiverId.username }}
+                {{ chat.receiverId.nombre }}
                 <a class="secondary-content">
                   {{ MessageDate(chat.msgId.message[chat.msgId.message.length - 1].createdAt) }}
                 </a>
               </span>
               <p>
                 {{ chat.msgId.message[chat.msgId.message.length - 1].body }}
-                <a class="secondary-content"
-                  *ngIf="!chat.msgId.message[chat.msgId.message.length - 1].isRead && 
-                                                    chat.receiverId.username !== chat.msgId.message[chat.msgId.message.length - 1].receivername">
+                <a
+                  class="secondary-content"
+                  *ngIf="
+                    !chat.msgId.message[chat.msgId.message.length - 1].isRead &&
+                    chat.receiverId.username !== chat.msgId.message[chat.msgId.message.length - 1].receivername
+                  "
+                >
                   <i class="material-icons">brightness_</i>
                 </a>
                 <a class="secondary-content" *ngIf="chat.msgId.message[chat.msgId.message.length - 1].isRead">
@@ -77,10 +90,12 @@
     </div>
     <div class="nav-content">
       <div class="nav-div">
-        <img class="circle responsive-img"
-          src="http://res.cloudinary.com/sejezara/image/upload/v{{imageVersion}}/{{imageId}}" />
+        <img
+          class="circle responsive-img"
+          src="http://res.cloudinary.com/sejezara/image/upload/v{{ imageVersion }}/{{ imageId }}"
+        />
       </div>
-      <h1 class="profile-name">{{ user.username }}</h1>
+      <h1 class="profile-name">{{ user.nombre }}</h1>
       <!-- <p class="user-text">Esto Es Un Texto</p> -->
     </div>
   </div>

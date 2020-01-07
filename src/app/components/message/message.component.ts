@@ -40,7 +40,7 @@ export class MessageComponent implements OnInit, AfterViewInit, OnChanges {
     private route: ActivatedRoute,
     private usersService: UsersService
   ) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {
@@ -93,6 +93,7 @@ export class MessageComponent implements OnInit, AfterViewInit, OnChanges {
   GetUserByUsername(name) {
     this.usersService.GetUserByName(name).subscribe(data => {
       this.receiverData = data.result;
+      console.log(data.result);
 
       this.GetMessages(this.user._id, data.result._id);
     });

@@ -16,7 +16,7 @@ export class NotificationsComponent implements OnInit {
   notifications = [];
 
   constructor(private tokenService: TokenService, private usersService: UsersService) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {

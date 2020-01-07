@@ -4,6 +4,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import io from 'socket.io-client';
 import * as moment from 'moment';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-comments',
@@ -20,7 +21,7 @@ export class CommentsComponent implements OnInit, AfterViewInit {
   post: string;
 
   constructor(private fb: FormBuilder, private postService: PostService, private route: ActivatedRoute) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {

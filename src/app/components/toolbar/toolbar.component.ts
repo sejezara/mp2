@@ -30,7 +30,7 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
     private usersService: UsersService,
     private msgService: MessageService
   ) {
-    this.socket = io('http://localhost:3000');
+    this.socket = io('http://192.168.43.253:3000');
   }
 
   ngOnInit() {
@@ -104,6 +104,7 @@ export class ToolbarComponent implements OnInit, AfterViewInit {
   }
 
   logout() {
+    this.socket.emit('disconnect', { room: 'global', user: this.user.username });
     this.tokenService.DeleteToken();
     this.router.navigate(['']);
   }

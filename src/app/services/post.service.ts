@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-const BASEURL = 'http://localhost:3000/api/mmpp2';
+const BASEURL = 'http://192.168.43.253:3000/api/mmpp2';
 
 @Injectable({
   providedIn: 'root'

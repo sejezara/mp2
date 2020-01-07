@@ -5,10 +5,10 @@
       alt=""
       class="circle"
     />
-    <span class="title">{{ post.username }}</span>
+    <span class="title">{{ post.nombre }}</span>
     <p class="time">
       {{ TimeFromNow(post.createdAt) }} <br />
-      {{ post.user.city }}, {{ post.user.state }}, {{ post.user.country }}
+      {{ post.user.carrera }}
     </p>
   </li>
   <div class="row">
