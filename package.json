@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "^8.2.14",
     "@angular/router": "^8.2.14",
     "core-js": "^2.6.11",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "materialize-css": "^1.0.0",
     "moment": "^2.24.0",
     "ng2-emoji-picker": "^1.4.8",
